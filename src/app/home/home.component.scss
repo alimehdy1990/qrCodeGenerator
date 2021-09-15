@@ -1,0 +1,38 @@
+img {
+   width: 200px;
+   height: 100px;
+}
+
+   .card{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+//       img {
+//          width: 200px;
+//          height: 100px;
+//       }
+    }
+h3 {
+   align-items: center;
+   text-align: center;
+}
+
+.flex {
+   display: flex;
+   justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+
+button {
+   width: 150px;
+}
+
+.sub-a4 {
+   width: 400px;
+}
+.text-align {
+   text-align: center;
+   align-items: center;
+}

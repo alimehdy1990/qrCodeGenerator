@@ -1,0 +1,37 @@
+<div class="flex">
+  <div>
+    <button type="button" mat-raised-button color="warn" (click)="fileInput.click()">Upload File</button>
+    <input hidden (change)="onChangeFile($event)" #fileInput type="file" id="file" accept=".csv">
+  </div>
+  <span>&nbsp;</span>
+  <div>
+    <button type="button" mat-raised-button color="warn" (click)="save2PDF()">Download File</button>
+  </div>
+  <span>&nbsp;</span>
+  <div>
+    <button type="button" mat-raised-button color="primary" (click)="reset()">Reset</button>
+  </div>
+</div>
+<div class="text-align">
+  <b><i>The csv file should include at least 2 fields at the beginning: id, name</i></b>
+</div>
+<div class="a4" id="content" #content>
+  <div class="sub-a4" id="{{arr.id}}" *ngFor="let arr of csvRecords;let i = index">
+    <div class="card">
+      <div>
+        <img src="../../assets/images/medair_logo.png">
+      </div>
+      <div>
+        <div><qrcode qrdata="{{arr['id']}}" [width]="100" [errorCorrectionLevel]="'M'" [elementType]="'svg'"></qrcode></div>
+      </div>
+    </div>
+    <div>
+      <h2><b>ID:</b> {{arr['id']}}</h2>
+      <h2><b>Name:</b> {{arr['name']}}</h2>
+      <!-- <h2>DOB: {{arr.dob}}</h2> -->
+    </div>
+    <h3><i>Medair Hotline: 79-109863</i></h3>
+    <hr>
+  </div>
+  <div class=".pagebreak"></div>
+</div>

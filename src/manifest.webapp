@@ -1,0 +1,28 @@
+{
+    "version": "1.0",
+    "name": "QR Code Generator",
+    "description": "This app meant to be used for generating QR codes from a CSV file",
+    "launch_path": "/index.html",
+    "appType": "APP",
+    "icons": {
+        "16": "assets/app_logo_16.png",
+        "48": "assets/app_logo_48.png",
+        "128": "assets/app-logo_128.png"
+    },
+    "developer": {
+        "name": "Ali MEHDY - AppDev Team - GSO",
+        "url": "https://medair.dhis2.bluesquare.org/"
+    },
+    "default_locale": "en",
+    "activities": {
+        "dhis": {
+            "href": "https://medair.dhis2.bluesquare.org/",
+            "namespace": "qrCodeGeneratorV1"
+        }
+    },
+    "authorities": [
+         "MY_APP_ADD_NEW",
+         "MY_APP_UPDATE",
+         "MY_APP_DELETE"
+    ]
+}
